@@ -8,7 +8,7 @@ import { Component , OnInit} from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'Tour of Heros';
 
-  p: Parent;
+  // p: Parent;
 
   constructor() {
     // this.p = new Parent();
@@ -17,20 +17,21 @@ export class AppComponent implements OnInit {
 
   async ngOnInit () {
 
-    this.p = new Parent();
-    await this.getNo();
+    // this.p = new Parent();
+    // await this.getNo();
   }
-  public async getNo(): Promise<string> {
-    return await this.p.no;
-  }
+
+  // public async getNo(): Promise<string> {
+  //   return await this.p.no;
+  // }
   // p.no;
 }
 
-export class Parent {
-  no: string;
-  child: Child;
-}
+// export class Parent {
+//   no: string;
+//   child: Child;
+// }
 
-export class Child {
-  nama: string;
-}
+// export class Child {
+//   nama: string;
+// }
