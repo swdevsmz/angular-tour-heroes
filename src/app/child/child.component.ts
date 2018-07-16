@@ -21,8 +21,8 @@ export class ChildComponent implements OnInit {
     this.opend();
   }
 
-  public opend(){
-    this.heroService.loginSubject.next();
+  public opend() {
+    this.heroService.openSubject.next();
   }
 
 }

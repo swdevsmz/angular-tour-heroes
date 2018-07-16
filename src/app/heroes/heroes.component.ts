@@ -22,7 +22,7 @@ export class HeroesComponent implements OnInit {
   ngOnInit() {
     this.getHeroes();
     this.isShown = true;
-    this.heroService.loginState.subscribe(() => { // 変更
+    this.heroService.openSubject.subscribe(() => { // 変更
       alert('終わりましたよ');
     });
   }

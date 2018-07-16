@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Hero } from './hero';
 import { HEROES } from './mock-heroes';
 import { Subject } from 'rxjs';
-// import { Subject } from 'rxjs/Subject'; // 変更
 
 @Injectable({
   providedIn: 'root'
@@ -10,15 +9,15 @@ import { Subject } from 'rxjs';
 
 export class HeroService {
 
-  public loginSubject: Subject<number> = new Subject();  // 変更
-  public loginState = this.loginSubject.asObservable();  // 追加
+  public openSubject: Subject<number> = new Subject();  // 変更
+  public openState = this.openSubject.asObservable();  // 追加
   public count = 0;  // 追加
 
 
   constructor() {
-    this.loginState.subscribe((data: number) => { // 変更
-      console.log(data);
-    });
+    // this.loginState.subscribe((data: number) => { // 変更
+    //   console.log(data);
+    // });
   }
 
   getHeroes(): Hero[] {
@@ -26,8 +25,8 @@ export class HeroService {
   }
 
   clickNext() { // 追加
-    this.count++;
-    this.loginSubject.next(this.count);
+    // this.count++;
+    this.openSubject.next();
   }
 
 }
