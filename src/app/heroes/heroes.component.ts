@@ -35,4 +35,15 @@ export class HeroesComponent implements OnInit {
     this.heroes = this.heroService.getHeroes();
   }
 
+  onChange(e) {
+    // console.log(e.activeId); // activeIdというプロパティがある
+    // console.log(e.nextId); // nextIdというプロパティがある
+    console.log('change');
+  }
+
+  onBlur(e) {
+    // console.log(e);
+    console.log('Blur');
+  }
+
 }

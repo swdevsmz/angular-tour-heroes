@@ -20,9 +20,13 @@ export class ChildComponent implements OnInit {
     // } , 10000);
     this.opend();
   }
-
   public opend() {
     this.heroService.openSubject.next();
   }
+  // public opend() {
+  //   this.heroService.openSubject.next();
+  // }
+
+
 
 }

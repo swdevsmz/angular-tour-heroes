@@ -1,4 +1,4 @@
-<h2>My Heroes</h2>
+<!-- <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes"
     [class.selected]="hero === selectedHero"
@@ -14,7 +14,17 @@
       <input [(ngModel)]="selectedHero.name" placeholder="name">
     </label>
   </div>
-</div>
-<div *ngIf="isShown">
+</div> -->
+<!-- <div *ngIf="isShown">
   <app-child></app-child>
-</div>
+</div> -->
+<input type="text" (blur)="onBlur($event)">
+<app-hoge-hoge (tabChange)="onChange($event)">
+  <ngb-tab title="あ">
+    <!-- <ng-template ngbTabContent>あああ</ng-template> -->
+  </ngb-tab>
+  <ngb-tab title="か">
+  </ngb-tab>
+  <ngb-tab title="さ">
+  </ngb-tab>
+</app-hoge-hoge>
